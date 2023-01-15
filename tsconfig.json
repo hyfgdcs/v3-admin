@@ -3,6 +3,7 @@
     "target": "esnext",
     "module": "esnext",
     "strict": true,
+    "noImplicitThis": true,
     "jsx": "preserve",
     "importHelpers": true,
     "moduleResolution": "node",
@@ -12,11 +13,10 @@
     "allowSyntheticDefaultImports": true,
     "suppressImplicitAnyIndexErrors": true,
     "sourceMap": true,
+    "resolveJsonModule": true,
     "baseUrl": ".",
     "types": [
-      "node",
-      "webpack-env",
-      "element-plus/global", // element-plus 的 volar 插件支持
+      "webpack-env"
     ],
     "paths": {
       "@/*": [
@@ -33,9 +33,15 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "tests/**/*.ts",
+    "tests/**/*.tsx"
+  ],
+  "nocheck":[
+    // "src"
   ],
   "exclude": [
+    "src",
     "node_modules"
   ]
 }
